@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Weinberger Aesthetics - Home
+    link(rel="stylesheet" href="./assets/css/style.css")
+
+  body
+    include shared/_header.pug
+    //- include ./svgs/logo.svg
+
+    main
+      include sections/_intro-text.pug
+      include sections/_treatments.pug
+      include sections/_memberships.pug
+      include sections/_why-weinberger.pug
+      
+      include sections/_contact.pug
+
+    include shared/_footer.pug

@@ -1,0 +1,103 @@
+.contact {
+  background-color: var(--primary);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-image: url('./../images/contact_bg_mobile.svg');
+
+  @media (min-width: $dev-mobile) {}
+
+  @media (min-width: $dev-tablet) {
+    background-image: url('./../images/contact_bg.svg');
+  }
+
+  @media (min-width: $dev-desktop) {}
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $dev-desktop) {}
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #ffffff;
+    padding: var(--section-padding) 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: fluid-value(10px, 30px);
+    // font-size: fluid-value(24px, 32px);
+    font-size: fluid-value(20px, 32px);
+  }
+
+  &__icon {
+    flex: fluid-value(60px, 75px) 0 0;
+
+    svg {
+      line-height: 1;
+      color: #ffffff;
+      // width: fluid-value(56px, 70px);
+      width: fluid-value(46px, 70px);
+      height: auto;
+    }
+  }
+
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__link--button {
+    font-weight: 600;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {
+      width: 50%;
+    }
+
+    @media (min-width: $dev-desktop) {}
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 200px;
+
+      @media (min-width: $dev-mobile) {}
+
+      @media (min-width: $dev-tablet) {
+        max-width: 420px;
+      }
+
+      @media (min-width: $dev-desktop) {}
+    }
+  }
+}

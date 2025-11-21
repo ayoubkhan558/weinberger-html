@@ -1,0 +1,68 @@
+.footer {
+  background: #F2F3F4;
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $dev-desktop) {}
+  }
+
+  &__logo svg {
+    max-height: 60px;
+    min-width: 100px;
+    width: 192px;
+    max-width: 95%;
+  }
+
+  &__contact {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: #000;
+  }
+
+  &__icon {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__link {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

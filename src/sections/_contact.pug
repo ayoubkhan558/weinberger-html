@@ -1,0 +1,24 @@
+section.contact
+  .container
+    .contact__inner
+
+      .contact__content
+        .contact__item
+          .contact__icon
+            include ./../svgs/icon_call.svg
+          a.contact__link(href="tel:0561772433") 0561-772433
+
+        .contact__item
+          .contact__icon
+            include ./../svgs/icon_email.svg
+          a.contact__link(href="mailto:kontakt@weinberger-aesthetics.de")
+            | kontakt@weinberger-aesthetics.de
+
+        .contact__item
+          .contact__icon
+            include ./../svgs/icon_calendar.svg
+          a.contact__link.contact__link--button(href="#")
+            | Online-Termin buchen
+
+      .contact__image
+        img(src="/assets/images/contact_girl.webp" alt="Weinberger Aesthetics Mitarbeiterin")

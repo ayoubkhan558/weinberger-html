@@ -1,0 +1,15 @@
+@import "./core/fonts";
+@import "./core/mixins";
+@import "./core/variables";
+@import "./core/base";
+@import "./core/section";
+@import "./core/layout";
+@import "./shared/header";
+@import "./shared/footer";
+
+/* sections */
+@import "./sections/intro-text";
+@import "./sections/treatments";
+@import "./sections/memberships";
+@import "./sections/why-weinberger";
+@import "./sections/contact";

@@ -1,0 +1,31 @@
+footer.footer
+  .container
+    .footer__inner
+
+      .footer__logo
+        include ./../svgs/logo.svg
+        //- img(src="./assets/images/logo.svg" alt="Weinberger Aesthetics") 
+
+      .footer__contact
+        .footer__item
+          .footer__icon
+            i.icon-location
+          .footer__text
+            span Wilhelmstraße 2a
+            span 34117 Kassel
+
+        .footer__item
+          .footer__icon
+            i.icon-phone
+          .footer__text 0561-772433
+
+        .footer__item
+          .footer__icon
+            i.icon-mail
+          a.footer__link(href="mailto:kontakt@weinberger-aesthetics.de")
+            | kontakt@weinberger-aesthetics.de
+
+      .footer__links
+        a.footer__link(href="/impressum") Impressum
+        a.footer__link(href="/datenschutz") Datenschutz
+        a.footer__link(href="#") Cookie-Einstellungen
