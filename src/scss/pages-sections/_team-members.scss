@@ -1,0 +1,28 @@
+.team {
+
+  &__grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__member {
+    flex: 1 1 200px;
+
+    .team__photo {
+      width: 100%;
+      margin-bottom: fluid-value(16px, 24px);
+    }
+
+    .team__name {
+      font-size: 24px;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .team__role {
+      color: var(--primary);
+    }
+  }
+}

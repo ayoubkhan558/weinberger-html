@@ -1,0 +1,48 @@
+.team-intro {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    width: 70%;
+  }
+
+  .team-intro__text {
+    text-align: center;
+    font-size: fluid-value(16px, 20px);
+    color: var(--primary);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: fluid-value(24px, 35px);
+  }
+
+  .team-intro__content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $dev-desktop) {}
+  }
+
+  &__column {
+    flex: 1;
+
+    p {
+      font-size: fluid-value(16px, 18px);
+      text-align: justify;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+  }
+}

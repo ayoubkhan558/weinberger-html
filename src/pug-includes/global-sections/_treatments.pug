@@ -1,0 +1,29 @@
+-
+  var treatmentsItems = [
+    { title: "Gesicht", img: "/assets/images/treatment_gesicht.webp", link: "service-detail.html#gesicht" },
+    { title: "Brust", img: "/assets/images/treatment_brust.webp", link: "service-detail.html#brust" },
+    { title: "Körperformung mittels Liposuktion/Lipofilling", img: "/assets/images/treatment_koerperformung.webp", link: "service-detail.html#koerperformung" },
+    { title: "Handchirurgie", img: "/assets/images/treatment_handchirurgie.webp", link: "service-detail.html#handchirurgie" },
+    { title: "Straffungsoperationen", img: "/assets/images/treatment_straffungsoperationen.webp", link: "service-detail.html#straffungsoperationen" },
+    { title: "Ohren", img: "/assets/images/treatment_ohren.webp", link: "service-detail.html#ohren" },
+    { title: "Intimchirurgie für Frauen", img: "/assets/images/treatment_intimchirurgie.webp", link: "service-detail.html#intimchirurgie" },
+    { title: "Behandlung von übermäßigem Schwitzen", img: "/assets/images/treatment_schwitzen.webp", link: "service-detail.html#schwitzen" },
+    { title: "Antiaging und minimalinvasive Verfahren", img: "/assets/images/treatment_antiaging.webp", link: "service-detail.html#antiaging" },
+    { title: "Gynäkomastie", img: "/assets/images/treatment_gynaekomastie.webp", link: "service-detail.html#gynaekomastie" },
+    { title: "Vampirlifting / PRP", img: "/assets/images/treatment_prp.webp", link: "service-detail.html#prp" },
+    { title: "Weiteres", img: "/assets/images/treatment_weiteres.webp", link: "service-detail.html#weiteres" }
+  ]
+
+
+section.section.section--treatments 
+  .container
+    .section-header
+      h2.section-header__title.section-header__title--sm Behandlungsspektrum
+
+    .treatments
+      .treatments__grid 
+        each item in treatmentsItems
+          .treatments__item
+            a.treatments__link(href=item.link)
+              img.treatments__image(src=item.img, alt=item.title)
+              .treatments__label= item.title

@@ -3,13 +3,24 @@
 @import "./core/variables";
 @import "./core/base";
 @import "./core/section";
+@import "./core/btns";
 @import "./core/layout";
+/* shared */
 @import "./shared/header";
 @import "./shared/footer";
 
 /* sections */
-@import "./sections/intro-text";
-@import "./sections/treatments";
-@import "./sections/memberships";
-@import "./sections/why-weinberger";
-@import "./sections/contact";
+@import "./global-sections/treatments";
+@import "./global-sections/why-weinberger";
+@import "./global-sections/contact";
+@import "./pages-sections/hero-alt";
+
+
+// pages sections
+@import "./pages-sections/intro-text";
+@import "./pages-sections/memberships";
+@import "./pages-sections/contact-form";
+@import "./pages-sections/contact-map";
+@import "./pages-sections/team-intro";
+@import "./pages-sections/team-faqs";
+@import "./pages-sections/team-members";

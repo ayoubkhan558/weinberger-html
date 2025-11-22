@@ -1,5 +1,5 @@
 :root {
-    --section-title-color: #2d6a4f;
+    --section-title-color: var(--primary);
     --card-bg-color: #f0f0f0;
     --card-border-radius: 20px;
     --card-padding: 20px;
@@ -33,13 +33,17 @@
             .why__card-title {
                 color: var(--primary);
             }
+
+            .why__icon {
+                filter: drop-shadow(1px 1px 2px var(--primary));
+            }
         }
     }
 
     &__card-header {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 16px;
         margin-bottom: 10px;
     }
 

@@ -1,18 +1,17 @@
 doctype html
 html(lang="de")
   head
-    title Weinberger Aesthetics - Home
+    title Team - Weinberger Aesthetics
     link(rel="stylesheet" href="./assets/css/style.css")
 
   body
     include pug-includes/shared/_header.pug
-    //- include ./svgs/logo.svg
 
     main
-      include pug-includes/pages-sections/_intro-text.pug
-      include pug-includes/global-sections/_treatments.pug 
+      include pug-includes/pages-sections/_team-hero.pug
+      include pug-includes/pages-sections/_team-intro.pug
+      include pug-includes/pages-sections/_team-members.pug 
       include pug-includes/pages-sections/_memberships.pug
-
       include pug-includes/global-sections/_why-weinberger.pug
       include pug-includes/global-sections/_contact.pug
 
