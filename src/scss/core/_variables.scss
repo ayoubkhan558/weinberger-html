@@ -11,6 +11,14 @@ $dev-max-width: 1440px;
 
     // colors 
     --body-color: #000000;
+    /* common colors (added for consolidation) */
+    --white: #ffffff;
+    --black: #000000;
+    --neutral-100: #F2F3F4;
+    --neutral-200: #f0f0f0;
+    --neutral-300: #e5e3e4;
+    --muted: #BABABA;
+    --text-strong: #333333;
     --primary: hsl(163 100% 13%);
     --primary-light-1: hsl(from var(--primary) h s calc(l + 8));
     --primary-light-2: hsl(from var(--primary) h s calc(l + 16));
@@ -35,4 +43,16 @@ $dev-max-width: 1440px;
     --accent-dark-1: hsl(from var(--accent) h s calc(l - 8));
     --accent-dark-2: hsl(from var(--accent) h s calc(l - 16));
     --accent-dark-3: hsl(from var(--accent) h s calc(l - 24));
+
+    /* spacing and radii */
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-24: 24px;
+    --spacing-40: 40px;
+    --radius-4: 4px;
+    --radius-16: 16px;
+    --radius-20: 20px;
 }

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: #e5e3e4;
+  background-color: var(--neutral-300);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center top;
@@ -17,20 +17,20 @@
 
   @media (min-width: $dev-desktop) {}
 
-  &__content {
-    padding-right: 20px;
+    &__content {
+    padding-right: var(--spacing-20);
   }
 
   &__title {
     font-size: fluid-value(38px, 56px);
     color: var(--primary);
     letter-spacing: -0.5px;
-    margin: 0 0 20px 0;
+    margin: 0 0 var(--spacing-20) 0;
   }
 
   &__subtitle {
     font-size: 1.125rem;
-    margin-bottom: 40px;
+    margin-bottom: var(--spacing-40);
     line-height: 1.5;
     max-width: 80%;
   }
