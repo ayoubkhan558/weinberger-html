@@ -339,6 +339,7 @@ section {
 
 /* shared */
 .header {
+  /* Skip link styling for keyboard users */
   z-index: 1000;
   position: relative;
   display: -webkit-box;
@@ -353,6 +354,37 @@ section {
   padding: 24px 0;
   background-color: #fff;
   /* ---- Mobile Toggle Button ---- */
+}
+.header .skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -9999;
+}
+.header .skip-link:focus, .header .skip-link:active {
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 10000;
+  background: #ffffff;
+  color: var(--primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+.header a:focus-visible,
+.header button:focus-visible,
+.header .nav-toggle:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
 }
 @media (min-width: 768px) {
   .header {
