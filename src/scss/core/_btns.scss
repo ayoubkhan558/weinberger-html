@@ -1,6 +1,8 @@
 .btn {
   border-radius: 10px;
   font-weight: 700;
+  display: inline-flex;
+  width: fit-content;
 
   &.btn-primary {
     background-color: var(--primary);

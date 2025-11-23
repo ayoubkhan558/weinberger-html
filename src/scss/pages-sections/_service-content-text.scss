@@ -1,0 +1,74 @@
+.service-content {
+  position: relative;
+
+  @media (min-width: $dev-mobile) {}
+
+  @media (min-width: $dev-tablet) {}
+
+  @media (min-width: $dev-desktop) {}
+
+  &__deco {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+
+    &--left {
+      left: -50px;
+    }
+
+    &--right {
+      right: -50px;
+      transform: scaleX(-1);
+    }
+  }
+
+  &__lead {
+    font-style: italic;
+    color: var(--primary);
+    margin-bottom: 32px;
+    max-width: 100%;
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {
+      max-width: 60%;
+    }
+
+    @media (min-width: $dev-desktop) {}
+  }
+
+  &__columns {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {
+      gap: 60px;
+      flex-direction: row;
+    }
+
+    @media (min-width: $dev-desktop) {}
+  }
+
+  &__col {
+    flex: 1;
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      text-align: justify;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

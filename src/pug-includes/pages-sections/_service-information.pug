@@ -1,0 +1,67 @@
+-
+  const infoList = [
+    { 
+      icon: "duration",
+      label: "Op-Dauer",
+      value: "1-2 Stunden"
+    },
+    { 
+      icon: "anesthesia",
+      label: "Anästhesie",
+      value: "Vollnarkose"
+    },
+    { 
+      icon: "stay",  
+      label: "Aufenthalt",
+      value: "Ambulant oder stationär"
+    },
+    { 
+      icon: "compression",
+      label: "Kompressionswäsche",
+      value: "Bei Verwendung von Implantaten Kompressions-BH für 6 Wochen."
+    },
+    { 
+      icon: "aftercare",
+      label: "Nachsorge",
+      value: "Kein Fadenzug erforderlich, Spezialpflaster für bis zu 6 Wochen"
+    },
+    { 
+      icon: "cost",
+      label: "Kosten",
+      value: "Ab 5.000,- zzgl. Mwst."
+    }
+  ];
+
+section.service-info-section
+  .container
+    .section-header
+      h2.section-header__title.section-header__title--sm.text-left Kurzinformationen
+
+    ul.info-list
+      each item in infoList
+        li.info-item
+          .info-item__label-group
+            .info-item__icon
+              case item.icon
+                when "duration"
+                  include ./../../svgs/info-icon-1.svg
+                when "anesthesia"
+                  include ./../../svgs/info-icon-2.svg
+                when "stay"
+                  include ./../../svgs/info-icon-3.svg
+                when "compression"
+                  include ./../../svgs/info-icon-4.svg
+                when "aftercare"
+                  include ./../../svgs/info-icon-5.svg
+                when "cost"
+                  include ./../../svgs/info-icon-6.svg
+
+            span.info-item__label= item.label
+          .info-item__value= item.value
+
+    .service-info-section__actions 
+      a.btn.btn-outline-primary(href="#") Behandlungsübersicht
+
+    .service-info-section__disclaimer
+      p Wir beraten gerne und ausführlich zum Thema Brustvergrößerung (Augmentation) mit Implantaten oder Eigenfett.
+      p Im Rahmen des Gesprächs kann die für Sie passende Lösung gefunden werden.

@@ -1,0 +1,76 @@
+ .service-hero {
+   position: relative;
+   background-color: var(--primary);
+   color: #fff;
+   margin-bottom: 40px;
+
+   @media (min-width: $dev-mobile) {}
+
+   @media (min-width: $dev-tablet) {}
+
+   @media (min-width: $dev-desktop) {}
+
+   &__title {
+     font-size: fluid-value(48px, 72px);
+     font-size: fluid-value(36px, 62px);
+     text-transform: uppercase;
+     font-weight: 400;
+     margin: 0;
+     letter-spacing: 1px;
+   }
+
+   &__grid {
+     gap: fluid-value(20px, 60px);
+     display: flex;
+     flex-direction: column;
+
+     @media (min-width: $dev-mobile) {}
+
+     @media (min-width: $dev-tablet) {
+       display: grid;
+       grid-template-columns: 5fr 3fr;
+     }
+
+     @media (min-width: $dev-desktop) {}
+   }
+
+   &__content {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+   }
+
+   &__image-wrapper {
+     //  height: 50%;
+     display: flex;
+     justify-content: flex-end;
+     height: 100px;
+
+     @media (min-width: $dev-mobile) {}
+
+     @media (min-width: $dev-tablet) {
+       height: 280px;
+     }
+
+     @media (min-width: $dev-desktop) {}
+   }
+
+   &__image {
+     //  height: 100%;
+     aspect-ratio: 1/1;
+     object-fit: cover;
+     border-radius: 20px;
+     height: 220px;
+     min-width: 200px;
+     width: 35%;
+
+     @media (min-width: $dev-mobile) {}
+
+     @media (min-width: $dev-tablet) {
+       height: 380px;
+       width: 100%;
+     }
+
+     @media (min-width: $dev-desktop) {}
+   }
+ }
