@@ -1,38 +1,37 @@
- .home-hero {
-   position: relative;
-   display: flex;
-   align-items: center;
-   overflow: hidden;
-   background-color: #e5e3e4;
-   background-size: auto;
-   background-repeat: no-repeat;
-   background-position: center top;
-   background-image: url('./../images/home-hero-mobile.jpg');
+.home-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #e5e3e4;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: url('./../images/home-hero-mobile.jpg');
 
-   @media (min-width: $dev-mobile) {}
+  @media (min-width: $dev-mobile) {}
 
-   @media (min-width: $dev-tablet) {
-     background-image: url('./../images/home-hero.jpg');
-   }
+  @media (min-width: $dev-tablet) {
+    background-image: url('./../images/home-hero.jpg');
+  }
 
-   @media (min-width: $dev-desktop) {}
-  
+  @media (min-width: $dev-desktop) {}
 
-   &__content {
-     padding-right: 20px;
-   }
+  &__content {
+    padding-right: 20px;
+  }
 
-   &__title {
-     font-size: fluid-value(38px, 56px); 
-     color: var(--primary);
-     margin: 0 0 20px 0;
-     letter-spacing: -0.5px;
-   }
+  &__title {
+    font-size: fluid-value(38px, 56px);
+    color: var(--primary);
+    letter-spacing: -0.5px;
+    margin: 0 0 20px 0;
+  }
 
-   &__subtitle {
-     font-size: 1.125rem;
-     margin-bottom: 40px;
-     line-height: 1.5;
-     max-width: 80%;
-   }
- }
+  &__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    max-width: 80%;
+  }
+}

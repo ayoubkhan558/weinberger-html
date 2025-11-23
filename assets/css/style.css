@@ -1009,8 +1009,8 @@ section {
 .home-hero__title {
   font-size: clamp(38px, 30.3366336634px + 0.0178217822 * 100vw, 56px);
   color: var(--primary);
-  margin: 0 0 20px 0;
   letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
 }
 .home-hero__subtitle {
   font-size: 1.125rem;
