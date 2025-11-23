@@ -1,0 +1,130 @@
+$color-bg-dark: #063b2d;
+$color-bg-card-active: #154f3f;
+$color-bg-light: #f4f6f5;
+$color-text-white: #ffffff;
+$color-text-dark: #1a1a1a;
+$color-border-dark: #3e6358;
+$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-faq-section {
+  background-color: $color-bg-dark;
+  color: $color-text-white;
+  padding: 80px 0;
+  font-family: $font-sans;
+
+  .container {
+    @include container;
+  }
+
+  .section-header {
+    margin-bottom: 25px;
+
+    &_title {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.2;
+    }
+  }
+
+  .about-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 60px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+
+  .about-text {
+    flex: 1;
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      opacity: 0.9;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .faq-item {
+    background-color: $color-bg-light;
+    color: $color-bg-dark;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    &__toggle {
+      font-size: 1.5rem;
+      line-height: 1;
+      font-weight: 300;
+    }
+
+    &__body {
+      display: none;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 15px;
+    }
+
+    &.is-active {
+      background-color: $color-bg-card-active;
+      color: $color-text-white;
+
+      .faq-item__body {
+        display: block;
+      }
+    }
+  }
+}
