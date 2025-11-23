@@ -1,29 +1,31 @@
-.header {
-  /* Skip link styling for keyboard users */
-  .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    z-index: -9999;
+/* Skip link styling for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -9999;
 
-    &:focus,
-    &:active {
-      left: 12px;
-      top: 12px;
-      width: auto;
-      height: auto;
-      overflow: visible;
-      z-index: 10000;
-      background: #ffffff;
-      color: var(--primary);
-      padding: 8px 12px;
-      border-radius: 4px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-    }
+  &:focus,
+  &:active {
+    left: 12px;
+    top: 12px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 10000;
+    background: #ffffff;
+    color: var(--primary);
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   }
+}
+
+.header {
+
 
   // Visible focus styles for keyboard users
   a:focus-visible,
@@ -31,7 +33,7 @@
   .nav-toggle:focus-visible {
     outline: 3px solid var(--primary);
     outline-offset: 2px;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
   }
 
   z-index: 1000;
