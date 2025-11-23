@@ -1,4 +1,4 @@
-.team-intro {
+.intro-text-sec {
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -8,7 +8,7 @@
     width: 70%;
   }
 
-  .team-intro__text {
+  .intro-text-sec__text {
     text-align: center;
     font-size: fluid-value(16px, 20px);
     color: var(--primary);
@@ -17,7 +17,7 @@
     margin-bottom: fluid-value(24px, 35px);
   }
 
-  .team-intro__content {
+  .intro-text-sec__content {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -44,5 +44,9 @@
 
   &__footer {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
   }
 }

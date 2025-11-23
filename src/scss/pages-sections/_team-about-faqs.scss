@@ -1,130 +1,119 @@
-$color-bg-dark: #063b2d;
-$color-bg-card-active: #154f3f;
-$color-bg-light: #f4f6f5;
-$color-text-white: #ffffff;
-$color-text-dark: #1a1a1a;
-$color-border-dark: #3e6358;
-$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ .about-faq-section {
+   background-color: var(--primary);
+   color: #fff;
 
-@mixin container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+   .section-header {
+     margin-bottom: 25px;
 
-.about-faq-section {
-  background-color: $color-bg-dark;
-  color: $color-text-white;
-  padding: 80px 0;
-  font-family: $font-sans;
+     &_title {
+       font-size: 2.5rem;
+       font-weight: 400;
+       margin: 0;
+       line-height: 1.2;
+     }
+   }
 
-  .container {
-    @include container;
-  }
+   .about-row {
+     display: flex;
+     justify-content: space-between;
+     gap: 50px;
+     margin-bottom: 60px;
+     flex-direction: column;
 
-  .section-header {
-    margin-bottom: 25px;
+     @media (min-width: $dev-mobile) {}
 
-    &_title {
-      font-size: 2.5rem;
-      font-weight: 400;
-      margin: 0;
-      line-height: 1.2;
-    }
-  }
+     @media (min-width: $dev-tablet) {
+       flex-direction: row;
+     }
 
-  .about-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    margin-bottom: 60px;
+     @media (min-width: $dev-desktop) {}
+   }
 
-    @media (max-width: 900px) {
-      flex-direction: column;
-    }
-  }
+   .about-text {
+     flex: 1;
 
-  .about-text {
-    flex: 1;
+     p {
+       font-size: 0.95rem;
+       line-height: 1.6;
+       margin-bottom: 20px;
+       opacity: 0.9;
 
-    p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      opacity: 0.9;
+       &:last-child {
+         margin-bottom: 0;
+       }
+     }
+   }
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
+   .about-image {
+     flex: 1;
+     display: flex;
+     justify-content: flex-end;
 
-  .about-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+     img {
+       width: 100%;
+       max-width: 600px;
+       height: auto;
+       object-fit: cover;
+       border-radius: 2px;
+     }
+   }
 
-    img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      object-fit: cover;
-      border-radius: 2px;
-    }
-  }
+   .faq-grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 20px;
+     align-items: start;
 
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: start;
+     @media (min-width: $dev-mobile) {}
 
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
+     @media (min-width: $dev-tablet) {
+       grid-template-columns: 1fr 1fr;
+     }
 
-  .faq-item {
-    background-color: $color-bg-light;
-    color: $color-bg-dark;
-    padding: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+     @media (min-width: $dev-desktop) {}
+   }
 
-    &__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+   /* Converted to accordion classes */
+   .accordion-item {
+     background-color: #F2F3F4;
+     color: var(--primary);
+     padding: 24px;
+     cursor: pointer;
+     transition: all 0.3s ease;
 
-    &__title {
-      font-size: 1.25rem;
-      font-weight: 400;
-      margin: 0;
-    }
+     .accordion-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+     }
 
-    &__toggle {
-      font-size: 1.5rem;
-      line-height: 1;
-      font-weight: 300;
-    }
+     .accordion-title {
+       font-size: fluid-value(18px, 20px);
+       font-weight: 400;
+       margin: 0;
+     }
 
-    &__body {
-      display: none;
-      margin-top: 20px;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      padding-top: 15px;
-    }
+     .accordion-toggle {
+       line-height: 1;
+       font-size: 1.5rem;
+     }
 
-    &.is-active {
-      background-color: $color-bg-card-active;
-      color: $color-text-white;
+     .accordion-body {
+       display: none;
+       margin-top: 20px;
+       font-size: fluid-value(16px, 18px);
+       border-top: 1px solid rgba(255, 255, 255, 0.2);
+       padding-top: 15px;
+       font-weight: 400;
+     }
 
-      .faq-item__body {
-        display: block;
-      }
-    }
-  }
-}
+     &.is-active {
+       background-color: var(--primary-light-1);
+       color: #fff;
+
+       .accordion-body {
+         display: block;
+       }
+     }
+   }
+ }

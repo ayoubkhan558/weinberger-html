@@ -1,4 +1,26 @@
-.team {
+.rooms {
+
+  .container {
+
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {}
+
+    @media (min-width: $dev-desktop) {}
+  }
+
+  .room__title {
+    text-align: left;
+
+    @media (min-width: $dev-mobile) {}
+
+    @media (min-width: $dev-tablet) {
+      text-align: center;
+    }
+
+    @media (min-width: $dev-desktop) {}
+  }
 
   &__grid {
     display: flex;
@@ -16,34 +38,20 @@
     @media (min-width: $dev-desktop) {}
   }
 
-  &__member {
+  &__item {
     flex: 1 1 200px;
 
-    .team__photo {
+    .room__photo {
       width: 100%;
       margin-bottom: fluid-value(16px, 24px);
     }
-
-    .team__name {
-      font-size: 24px;
-      color: var(--primary);
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .team__role {
-      color: var(--primary);
-    }
   }
 
-  .team__carousel {
-    display: block;
+  .room__carousel {
 
     @media (min-width: $dev-mobile) {}
 
-    @media (min-width: $dev-tablet) {
-      display: none;
-    }
+    @media (min-width: $dev-tablet) {}
 
     @media (min-width: $dev-desktop) {}
 
@@ -52,13 +60,14 @@
 
 
   /* Progress Bar */
-  .slider-progress {
+  .room-slider-progress {
     width: 100%;
     border-radius: 4px;
     height: 4px;
     background: #BABABA;
     margin-top: 32px;
     overflow: hidden;
+    display: flex;
 
     &-bar {
       height: 100%;
@@ -67,13 +76,9 @@
       transition: width 0.3s ease;
     }
 
-    display: flex;
-
     @media (min-width: $dev-mobile) {}
 
-    @media (min-width: $dev-tablet) {
-      display: none;
-    }
+    @media (min-width: $dev-tablet) {}
 
     @media (min-width: $dev-desktop) {}
   }

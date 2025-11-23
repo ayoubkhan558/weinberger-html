@@ -2,7 +2,7 @@ doctype html
 html(lang="de")
   head
     title Weinberger Aesthetics - Home
-    link(rel="stylesheet" href="./assets/css/style.css")
+    include pug-includes/shared/_header-head.pug
 
   body
     include pug-includes/shared/_header.pug
@@ -10,9 +10,9 @@ html(lang="de")
 
     main
       include pug-includes/pages-sections/_intro-text.pug
-      include pug-includes/global-sections/_treatments.pug 
+      include pug-includes/global-sections/_treatments.pug
+       
       include pug-includes/pages-sections/_memberships.pug
-
       include pug-includes/global-sections/_why-weinberger.pug
       include pug-includes/global-sections/_contact.pug
 

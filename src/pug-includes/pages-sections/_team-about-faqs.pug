@@ -16,34 +16,36 @@ section.about-faq-section
         img(src="./assets/images/katharina-weinberger-1.webp" alt="Dr. med. Katharina Weinberger")
 
     // Bottom Section: FAQ Grid
-    .faq-grid
+    .faq-grid.accordion(data-single="false")
+
       // Active Item (Open)
-      .faq-item.is-active
-        .faq-item__header
-          h3.faq-item__title Wer gehört zum Team von Weinberger Aesthetics?
-          span.faq-item__toggle &minus;
-        .faq-item__body
+      .faq-item.accordion-item.is-active
+        .faq-item__header.accordion-header
+          h3.faq-item__title.accordion-title Wer gehört zum Team von Weinberger Aesthetics?
+          span.faq-item__toggle.accordion-toggle &minus;
+        .faq-item__body.accordion-body
           p Unser Team besteht aus erfahrenen Fachkräften der Plastischen und Ästhetischen Chirurgie sowie speziell geschultem medizinischem Personal. Jede Mitarbeiterin und jeder Mitarbeiter bringt fundiertes Fachwissen und viel Einfühlungsvermögen mit.
-      // Inactive Item (Closed)
-      .faq-item
-        .faq-item__header
-          h3.faq-item__title Welche Qualifikationen hat Dr. Katharina Weinberger?
-          span.faq-item__toggle &plus;
-        .faq-item__body
+
+      // Inactive Item
+      .faq-item.accordion-item
+        .faq-item__header.accordion-header
+          h3.faq-item__title.accordion-title Welche Qualifikationen hat Dr. Katharina Weinberger?
+          span.faq-item__toggle.accordion-toggle &plus;
+        .faq-item__body.accordion-body
           p Dr. Katharina Weinberger ist Fachärztin für Plastische und Ästhetische Chirurgie mit umfangreicher Ausbildung und langjähriger Erfahrung. Sie ist Mitglied in mehreren renommierten Fachgesellschaften und bildet sich kontinuierlich fort.
 
-      // Inactive Item (Closed)
-      .faq-item
-        .faq-item__header
-          h3.faq-item__title Wie läuft ein persönliches Beratungsgespräch ab?
-          span.faq-item__toggle &plus;
-        .faq-item__body
+      // Inactive Item
+      .faq-item.accordion-item
+        .faq-item__header.accordion-header
+          h3.faq-item__title.accordion-title Wie läuft ein persönliches Beratungsgespräch ab?
+          span.faq-item__toggle.accordion-toggle &plus;
+        .faq-item__body.accordion-body
           p Während des Gesprächs nimmt sich Dr. Weinberger ausreichend Zeit, um Ihre Wünsche, medizinischen Voraussetzungen und möglichen Behandlungsmethoden zu besprechen. Ziel ist eine individuelle, sichere und ganzheitliche Lösung.
 
-      // Inactive Item (Closed)
-      .faq-item
-        .faq-item__header
-          h3.faq-item__title Was macht das Team besonders?
-          span.faq-item__toggle &plus;
-        .faq-item__body
+      // Inactive Item
+      .faq-item.accordion-item
+        .faq-item__header.accordion-header
+          h3.faq-item__title.accordion-title Was macht das Team besonders?
+          span.faq-item__toggle.accordion-toggle &plus;
+        .faq-item__body.accordion-body
           p Bei uns stehen Menschlichkeit, Professionalität und Vertrauen im Mittelpunkt. Wir arbeiten eng zusammen, um Ihnen eine angenehme Atmosphäre, transparente Abläufe und höchste Sicherheitsstandards zu bieten.

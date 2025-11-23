@@ -2,6 +2,9 @@
 <html lang="de">
   <head>
     <title>Team - Weinberger Aesthetics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
@@ -13,6 +16,7 @@
           <nav>
             <ul>
               <li><a href="kontakt.html">kontakt</a></li>
+              <li><a class="active" href="über-uns.html">über-uns</a></li>
               <li><a class="active" href="team.html">Team</a></li>
               <li><a href="tehandlungsspektrum.html">Behandlungsspektrum</a></li>
               <li><a href="medizinische-kosmetik.html">Medizinische Kosmetik</a></li>
@@ -46,27 +50,27 @@
         <div class="hero-alt_overlay"></div>
       </section>
       <!-- Section Container-->
-      <section class="team-intro" style="background-image: url(./assets/images/team-intro-bg.svg)">
+      <section class="intro-text-sec" style="background-image: url(./assets/images/team-intro-bg.svg)">
         <div class="container">
           <!-- Header Block as requested-->
           <div class="section-header">
             <h2h2 class="section-header__title">TEAM</h2h2>
           </div>
           <!-- Introductory italicized text-->
-          <p class="team-intro__text">Unser Team steht für Kompetenz, Sorgfalt und eine besondere Liebe zum Detail. Bei Weinberger Aesthetics arbeiten Menschen, die ihre medizinische Expertise mit echter Herzlichkeit verbinden – für Ihre Sicherheit, Ihr Wohlbefinden und Ergebnisse, die natürlich überzeugen.</p>
+          <p class="intro-text-sec__text">Unser Team steht für Kompetenz, Sorgfalt und eine besondere Liebe zum Detail. Bei Weinberger Aesthetics arbeiten Menschen, die ihre medizinische Expertise mit echter Herzlichkeit verbinden – für Ihre Sicherheit, Ihr Wohlbefinden und Ergebnisse, die natürlich überzeugen.</p>
           <!-- Main content columns-->
-          <div class="team-intro__content">
+          <div class="intro-text-sec__content">
             <!-- Left Column-->
-            <div class="team-intro__column">
+            <div class="intro-text-sec__column">
               <p>Jedes Teammitglied bringt seine eigene Stärke, Qualifikation und Erfahrung mit. Gemeinsam schaffen wir eine entspannte Atmosphäre, in der Sie sich zu jeder Zeit gut aufgehoben fühlen.</p>
             </div>
             <!-- Right Column-->
-            <div class="team-intro__column">
+            <div class="intro-text-sec__column">
               <p>Ob Beratung, Behandlung oder Nachsorge – wir begleiten Sie mit Professionalität, Empathie und einem hohen Qualitätsanspruch auf Ihrem ästhetischen Weg.</p>
             </div>
           </div>
           <!-- Action Button-->
-          <div class="team-intro__footer"><a class="btn btn-primary" href="tehandlungsspektrum.html">Behandlungen ansehen</a></div>
+          <div class="intro-text-sec__footer"><a class="btn btn-primary" href="tehandlungsspektrum.html">Behandlungen ansehen</a></div>
         </div>
       </section>
       <section class="about-faq-section">
@@ -84,40 +88,40 @@
             <div class="about-image"><img src="./assets/images/katharina-weinberger-1.webp" alt="Dr. med. Katharina Weinberger"></div>
           </div>
           <!-- Bottom Section: FAQ Grid-->
-          <div class="faq-grid">
+          <div class="faq-grid accordion" data-single="false">
             <!-- Active Item (Open)-->
-            <div class="faq-item is-active">
-              <div class="faq-item__header">
-                <h3 class="faq-item__title">Wer gehört zum Team von Weinberger Aesthetics?</h3><span class="faq-item__toggle">&minus;</span>
+            <div class="faq-item accordion-item is-active">
+              <div class="faq-item__header accordion-header">
+                <h3 class="faq-item__title accordion-title">Wer gehört zum Team von Weinberger Aesthetics?</h3><span class="faq-item__toggle accordion-toggle">&minus;</span>
               </div>
-              <div class="faq-item__body">
+              <div class="faq-item__body accordion-body">
                 <p>Unser Team besteht aus erfahrenen Fachkräften der Plastischen und Ästhetischen Chirurgie sowie speziell geschultem medizinischem Personal. Jede Mitarbeiterin und jeder Mitarbeiter bringt fundiertes Fachwissen und viel Einfühlungsvermögen mit.</p>
               </div>
             </div>
-            <!-- Inactive Item (Closed)-->
-            <div class="faq-item">
-              <div class="faq-item__header">
-                <h3 class="faq-item__title">Welche Qualifikationen hat Dr. Katharina Weinberger?</h3><span class="faq-item__toggle">&plus;</span>
+            <!-- Inactive Item-->
+            <div class="faq-item accordion-item">
+              <div class="faq-item__header accordion-header">
+                <h3 class="faq-item__title accordion-title">Welche Qualifikationen hat Dr. Katharina Weinberger?</h3><span class="faq-item__toggle accordion-toggle">&plus;</span>
               </div>
-              <div class="faq-item__body">
+              <div class="faq-item__body accordion-body">
                 <p>Dr. Katharina Weinberger ist Fachärztin für Plastische und Ästhetische Chirurgie mit umfangreicher Ausbildung und langjähriger Erfahrung. Sie ist Mitglied in mehreren renommierten Fachgesellschaften und bildet sich kontinuierlich fort.</p>
               </div>
             </div>
-            <!-- Inactive Item (Closed)-->
-            <div class="faq-item">
-              <div class="faq-item__header">
-                <h3 class="faq-item__title">Wie läuft ein persönliches Beratungsgespräch ab?</h3><span class="faq-item__toggle">&plus;</span>
+            <!-- Inactive Item-->
+            <div class="faq-item accordion-item">
+              <div class="faq-item__header accordion-header">
+                <h3 class="faq-item__title accordion-title">Wie läuft ein persönliches Beratungsgespräch ab?</h3><span class="faq-item__toggle accordion-toggle">&plus;</span>
               </div>
-              <div class="faq-item__body">
+              <div class="faq-item__body accordion-body">
                 <p>Während des Gesprächs nimmt sich Dr. Weinberger ausreichend Zeit, um Ihre Wünsche, medizinischen Voraussetzungen und möglichen Behandlungsmethoden zu besprechen. Ziel ist eine individuelle, sichere und ganzheitliche Lösung.</p>
               </div>
             </div>
-            <!-- Inactive Item (Closed)-->
-            <div class="faq-item">
-              <div class="faq-item__header">
-                <h3 class="faq-item__title">Was macht das Team besonders?</h3><span class="faq-item__toggle">&plus;</span>
+            <!-- Inactive Item-->
+            <div class="faq-item accordion-item">
+              <div class="faq-item__header accordion-header">
+                <h3 class="faq-item__title accordion-title">Was macht das Team besonders?</h3><span class="faq-item__toggle accordion-toggle">&plus;</span>
               </div>
-              <div class="faq-item__body">
+              <div class="faq-item__body accordion-body">
                 <p>Bei uns stehen Menschlichkeit, Professionalität und Vertrauen im Mittelpunkt. Wir arbeiten eng zusammen, um Ihnen eine angenehme Atmosphäre, transparente Abläufe und höchste Sicherheitsstandards zu bieten.</p>
               </div>
             </div>
@@ -145,6 +149,36 @@
               <h3 class="team__name">Team Member   </h3>
               <p class="team__role">Skin Therapist</p>
             </div>
+          </div>
+          <div class="splide team__carousel" id="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"> 
+                  <!-- Team Member 1-->
+                  <div class="team__member"><img class="team__photo" src="./assets/images/team-katharina-weinberger.webp" alt="Katharina Weinberger ">
+                    <h3 class="team__name">Katharina Weinberger</h3>
+                    <p class="team__role">Skin Specialist</p>
+                  </div>
+                </li>
+                <li class="splide__slide"> 
+                  <!-- Team Member 2-->
+                  <div class="team__member"><img class="team__photo" src="./assets/images/team-1.webp" alt="Team Member">
+                    <h3 class="team__name">Team Member        </h3>
+                    <p class="team__role">Dermatologist</p>
+                  </div>
+                </li>
+                <li class="splide__slide"> 
+                  <!-- Team Member 3-->
+                  <div class="team__member"><img class="team__photo" src="./assets/images/team-3.webp" alt="Alex Johnson">
+                    <h3 class="team__name">Team Member   </h3>
+                    <p class="team__role">Skin Therapist</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="slider-progress">
+            <div class="slider-progress-bar"></div>
           </div>
         </div>
       </section>
@@ -230,6 +264,8 @@
         </div>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.6/bundled/lenis.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <footer class="footer">
       <div class="container">

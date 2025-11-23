@@ -1,31 +1,104 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Select all FAQ items
-  const faqItems = document.querySelectorAll('.faq-item');
 
-  faqItems.forEach(item => {
-    const header = item.querySelector('.faq-item__header');
-    
+document.addEventListener('DOMContentLoaded', () => {
+  const lenis = new Lenis({
+    duration: 2.2,
+    smooth: true,
+    smoothTouch: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const accordionContainer = document.querySelector('.faq-grid.accordion');
+  const accordionItems = document.querySelectorAll('.accordion-item');
+
+  // Read attribute: true = single mode / false = multi mode
+  const singleMode = accordionContainer?.getAttribute('data-single') === 'true';
+
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+
     header.addEventListener('click', () => {
-      // Check if the clicked item is currently active
       const isActive = item.classList.contains('is-active');
 
-      // 1. Close all items first (Accordion behavior)
-      faqItems.forEach(otherItem => {
-        otherItem.classList.remove('is-active');
-        const otherToggle = otherItem.querySelector('.faq-item__toggle');
-        if (otherToggle) {
-          otherToggle.innerHTML = '&plus;'; // Reset icon to Plus
-        }
-      });
+      if (singleMode) {
+        // Single accordion behavior
+        accordionItems.forEach(otherItem => {
+          otherItem.classList.remove('is-active');
+          const otherToggle = otherItem.querySelector('.accordion-toggle');
+          if (otherToggle) {
+            otherToggle.innerHTML = '&plus;';
+          }
+        });
+      }
 
-      // 2. If the clicked item was NOT active, open it
+      // Toggle clicked item (works for both single & multi modes)
       if (!isActive) {
         item.classList.add('is-active');
-        const toggle = item.querySelector('.faq-item__toggle');
-        if (toggle) {
-          toggle.innerHTML = '&minus;'; // Set icon to Minus
-        }
+        const toggle = item.querySelector('.accordion-toggle');
+        if (toggle) toggle.innerHTML = '&minus;';
+      } else {
+        item.classList.remove('is-active');
+        const toggle = item.querySelector('.accordion-toggle');
+        if (toggle) toggle.innerHTML = '&plus;';
       }
     });
   });
+});
+
+
+// Slides/Carousels
+document.addEventListener("DOMContentLoaded", function () {
+  var splide = new Splide(".team__carousel", {
+    type: "loop",
+    autoplay: true,
+    interval: 3000,
+    pagination: false,
+    arrows: false,
+  });
+
+  var bar = document.querySelector(".slider-progress-bar");
+
+  splide.on("mounted move", function () {
+    var end = splide.Components.Controller.getEnd() + 1;
+    var rate = Math.min((splide.index + 1) / end, 1);
+    bar.style.width = String(100 * rate) + "%";
+  });
+
+  splide.mount();
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var splideElm = document.querySelector(".room__carousel");
+  var splide = new Splide(".room__carousel", {
+    type: "loop",
+    autoplay: true,
+    interval: 3000,
+    pagination: false,
+    arrows: false,
+    gap: 32,
+    perPage: 3, // Desktop: 3 slides
+    breakpoints: {
+      768: {
+        perPage: 1, // Mobile: 1 slide
+      },
+    },
+  });
+
+  var barEl = document.querySelector(".room-slider-progress-bar");
+
+  splide.on("mounted move", function () {
+    var end = splide.Components.Controller.getEnd() + 1;
+    var rate = Math.min((splide.index + 1) / end, 1);
+    barEl.style.width = String(100 * rate) + "%";
+  });
+
+  splide.mount();
 });
