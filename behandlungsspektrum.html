@@ -213,6 +213,42 @@
     <script src="./assets/js/splide.min.js"></script>
     <script src="./assets/js/lenis.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <!-- ScrollReveal (animations)-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      (function(){
+        try {
+          if (typeof ScrollReveal === 'undefined') return;
+          const sr = ScrollReveal({
+            distance: '24px',
+            duration: 700,
+            easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+            scale: 1,
+            mobile: true
+          });
+      
+          // Hero content
+          sr.reveal('.home-hero__content', { origin: 'bottom', interval: 50, delay: 100 });
+      
+          // Why cards
+          sr.reveal('.why__card', { origin: 'bottom', distance: '16px', interval: 120 });
+      
+          // Treatments grid items
+          sr.reveal('.treatments__item', { origin: 'bottom', distance: '20px', interval: 100 });
+      
+          // Membership logos
+          sr.reveal('.memberships__item', { origin: 'bottom', distance: '12px', interval: 80 });
+      
+          // Contact block
+          sr.reveal('.contact__image, .contact__content', { origin: 'right', distance: '24px', interval: 80 });
+      
+        } catch (err) {
+          try { console.error('ScrollReveal init error', err); } catch (e) {}
+        }
+      })();
+      
+      
+    </script>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
