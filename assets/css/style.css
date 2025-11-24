@@ -80,7 +80,7 @@
 }
 */
 :root {
-  --section-padding: clamp(456px, 622.4653465347px + -0.3871287129 * 100vw, 65px);
+  --section-padding: clamp(45px, 36.4851485149px + 0.0198019802 * 100vw, 65px);
   --font-size-base: clamp(16px, 16px + 0 * 100vw, 16px);
   --font-size-lg: clamp(16px, 15.1485148515px + 0.001980198 * 100vw, 18px);
   --body-color: #000000;
