@@ -34,7 +34,6 @@
 
      p {
        font-size: 0.95rem;
-       line-height: 1.6;
        margin-bottom: 20px;
        opacity: 0.9;
 
@@ -101,7 +100,7 @@
      .accordion-body {
        display: none;
        margin-top: 20px;
-       font-size: fluid-value(16px, 18px);
+       font-size: var(--font-size-lg);
        border-top: 1px solid rgba(255, 255, 255, 0.2);
        padding-top: 15px;
        font-weight: 400;

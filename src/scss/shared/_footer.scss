@@ -54,12 +54,6 @@
     line-height: 1;
   }
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.4;
-  }
-
   &__links {
     display: flex;
     flex-direction: column;
@@ -72,13 +66,21 @@
     gap: 10px;
   }
 
+  &__text {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+  }
+
   .footer__link {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     color: var(--body-color);
     text-decoration: none;
-    font-size: 15px;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
 
     &:hover {
       text-decoration: underline;

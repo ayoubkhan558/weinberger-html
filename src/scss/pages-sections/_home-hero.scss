@@ -7,6 +7,8 @@
   background-image: url('./../images/home-hero-mobile.jpg');
   color: var(--white);
   min-height: 800px;
+  display: flex;
+  align-items: flex-start;
 
   @media (min-width: $dev-mobile) {}
 
@@ -15,6 +17,7 @@
     background-image: url('./../images/home-hero.jpg');
     color: var(--primary);
     min-height: 600px;
+    align-items: center;
   }
 
   @media (min-width: $dev-desktop) {}
@@ -37,6 +40,10 @@
     }
 
     @media (min-width: $dev-desktop) {}
+  }
+
+  &__content-wrapper {
+    display: flex;
   }
 
   &__content {

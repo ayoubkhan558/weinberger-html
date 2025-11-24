@@ -39,7 +39,7 @@ section {
   }
 
   p {
-    font-size: fluid-value(16px, 18px);
+    font-size: var(--font-size-lg);
   }
 }
 
