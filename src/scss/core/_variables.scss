@@ -6,7 +6,8 @@ $dev-min-width: 430px;
 $dev-max-width: 1440px;
 
 :root {
-    --section-padding: 65px;
+    // --section-padding: 65px;
+    @include fluid-var(section-padding, 456px, 65px);
     @include fluid-var(font-size-base, 16px, 16px);
     @include fluid-var(font-size-lg, 16px, 18px);
 
