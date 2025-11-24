@@ -646,6 +646,16 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 768px) {
+  .footer__links {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 .footer .footer__address {
   display: -webkit-box;
