@@ -22,6 +22,14 @@
         transform: translateY(-4px);
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
       }
+
+      &:focus-visible {
+        outline: 3px solid var(--primary);
+        outline-offset: 2px;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+      }
+
+      .treatments__link{}
     }
 
     &__image {

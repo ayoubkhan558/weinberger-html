@@ -14,16 +14,22 @@
     { title: "Weiteres", img: "/assets/images/treatment_weiteres.webp", link: "projekte.html#weiteres" }
   ]
 
-
 section.section.section--treatments 
   .container
     .section-header
-      h2.section-header__title.section-header__title--sm Behandlungsspektrum
+      h2.section-header__title.section-header__title--sm(id="treatments-heading") Behandlungsspektrum
 
     .treatments
-      .treatments__grid 
+      ul.treatments__grid(role="list" aria-labelledby="treatments-heading")
         each item in treatmentsItems
-          .treatments__item
-            a.treatments__link(href=item.link)
-              img.treatments__image(src=item.img, alt=item.title)
+          li.treatments__item(role="listitem")
+            a.treatments__link(
+              href=item.link 
+              aria-label=item.title
+            )
+              img.treatments__image(
+                src=item.img, 
+                alt=`Behandlung: ${item.title}`,
+                loading="lazy"
+              )
               .treatments__label= item.title

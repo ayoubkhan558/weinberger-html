@@ -172,3 +172,108 @@ document.addEventListener("DOMContentLoaded", function () {
     roomSplide.mount();
   }
 });
+
+
+
+
+// custom cursor
+document.addEventListener("DOMContentLoaded", function () {
+  const cursor = document.querySelector(".cursor");
+  const follower = document.querySelector(".cursor-follower");
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let cursorX = 0;
+  let cursorY = 0;
+  let followerX = 0;
+  let followerY = 0;
+
+  // Smoother easing values
+  const cursorSpeed = 0.18;
+  const followerSpeed = 0.08;
+
+  // Track mouse position
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Smooth animation loop
+  function animate() {
+    // Calculate distance for easing
+    const distX = mouseX - cursorX;
+    const distY = mouseY - cursorY;
+
+    // Update cursor position with easing
+    cursorX += distX * cursorSpeed;
+    cursorY += distY * cursorSpeed;
+
+    // Update follower with slower easing
+    followerX += (mouseX - followerX) * followerSpeed;
+    followerY += (mouseY - followerY) * followerSpeed;
+
+    // Apply transforms
+    cursor.style.left = cursorX + "px";
+    cursor.style.top = cursorY + "px";
+    follower.style.left = followerX + "px";
+    follower.style.top = followerY + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Hover effects for buttons and interactive elements
+  const buttons = document.querySelectorAll(".btn, .card, .image-box");
+
+  buttons.forEach((button) => {
+    button.addEventListener("mouseenter", () => {
+      cursor.classList.add("hover");
+      follower.classList.add("hover");
+    });
+
+    button.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hover");
+      follower.classList.remove("hover");
+    });
+  });
+
+  // Special hover effect for text and links
+  const textElements = document.querySelectorAll("h1, h2, h3, p, a");
+
+  textElements.forEach((text) => {
+    text.addEventListener("mouseenter", () => {
+      cursor.classList.add("text-hover");
+      follower.classList.add("text-hover");
+    });
+
+    text.addEventListener("mouseleave", () => {
+      cursor.classList.remove("text-hover");
+      follower.classList.remove("text-hover");
+    });
+  });
+
+  // Hide cursor when leaving window
+  document.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "0";
+    follower.style.opacity = "0";
+  });
+
+  document.addEventListener("mouseenter", () => {
+    cursor.style.opacity = "1";
+    follower.style.opacity = "1";
+  });
+
+  // Click effect
+  document.addEventListener("mousedown", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(0.8)";
+    follower.style.transform = "translate(-50%, -50%) scale(0.9)";
+  });
+
+  document.addEventListener("mouseup", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(1)";
+    follower.style.transform = "translate(-50%, -50%) scale(1)";
+  });
+
+
+});
