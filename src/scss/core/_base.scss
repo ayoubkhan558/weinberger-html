@@ -30,10 +30,18 @@
  h4,
  h5,
  h6 {
-     line-height: 1.4;
      font-size: inherit;
      font-weight: inherit;
      overflow-wrap: break-word;
+     line-height: 1.2;
+
+     @media (min-width: $dev-mobile) {}
+
+     @media (min-width: $dev-tablet) {
+         line-height: 1.4;
+     }
+
+     @media (min-width: $dev-desktop) {}
  }
 
  p {
