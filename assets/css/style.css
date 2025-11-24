@@ -733,7 +733,7 @@ section {
 .section--treatments .treatments__grid {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   gap: 16px;
 }
 .section--treatments .treatments__item {
