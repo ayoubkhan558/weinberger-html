@@ -6,7 +6,9 @@
 
    @media (min-width: $dev-mobile) {}
 
-   @media (min-width: $dev-tablet) {}
+   @media (min-width: $dev-tablet) {
+     margin-bottom: 0px;
+   }
 
    @media (min-width: $dev-desktop) {}
 

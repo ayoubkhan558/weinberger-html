@@ -1327,6 +1327,11 @@ section {
   color: #fff;
   margin-bottom: 40px;
 }
+@media (min-width: 768px) {
+  .service-hero {
+    margin-bottom: 0px;
+  }
+}
 .service-hero__title {
   font-size: clamp(48px, 37.7821782178px + 0.0237623762 * 100vw, 72px);
   font-size: clamp(36px, 24.9306930693px + 0.0257425743 * 100vw, 62px);
