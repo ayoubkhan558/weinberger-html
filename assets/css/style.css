@@ -1668,7 +1668,12 @@ section {
   background-repeat: no-repeat;
 }
 .intro-text-sec .container {
-  width: 70%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .intro-text-sec .container {
+    width: 70%;
+  }
 }
 .intro-text-sec .intro-text-sec__text {
   text-align: center;
