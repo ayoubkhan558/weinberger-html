@@ -962,9 +962,6 @@ section {
 .contact__link:hover {
   opacity: 0.8;
 }
-.contact__link--button {
-  font-weight: 600;
-}
 .contact__image {
   display: -webkit-box;
   display: -ms-flexbox;
