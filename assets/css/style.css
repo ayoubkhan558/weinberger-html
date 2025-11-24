@@ -264,7 +264,7 @@ section {
   padding: 0 clamp(16px, 12.308vw - 20.923px, 32px);
   max-width: 1200px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1224px) {
   .container {
     max-width: 1400px;
     padding: 0 64px;
@@ -406,7 +406,7 @@ section {
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
 }
-@media (min-width: 768px) {
+@media (min-width: 1224px) {
   .header {
     background-color: #F2F3F4;
   }
@@ -420,7 +420,7 @@ section {
   height: 60px;
   max-width: 125px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1224px) {
   .header .logo img,
   .header .logo svg {
     max-width: none;
@@ -446,7 +446,7 @@ section {
   font-size: 12px !important;
   margin-left: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 1224px) {
   .header .mobile-btn {
     display: none;
   }
@@ -454,7 +454,7 @@ section {
 .header .btn-desktop {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1224px) {
   .header .btn-desktop {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -483,7 +483,7 @@ section {
   display: flex;
   gap: 6px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1224px) {
   .header .nav-toggle {
     display: none;
     gap: 5px;
@@ -518,7 +518,7 @@ section {
   padding: 24px;
   gap: var(--spacing-24);
 }
-@media (min-width: 768px) {
+@media (min-width: 1224px) {
   .header nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -550,7 +550,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media (min-width: 768px) {
+@media (min-width: 1224px) {
   .header nav ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
