@@ -758,9 +758,8 @@ html.lenis {
     width: auto;
   }
 }
-.footer__icon {
-  width: 21px;
-  line-height: 1;
+.footer__icon svg {
+  height: 21px;
 }
 .footer__links {
   display: -webkit-box;

@@ -63,8 +63,9 @@
   }
 
   &__icon {
-    width: 21px;
-    line-height: 1;
+    svg {
+      height: 21px;
+    }
   }
 
   &__links {
