@@ -177,7 +177,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // custom cursor
 document.addEventListener("DOMContentLoaded", function () {
-  // Check for cursor and follower; create if missing
+
+  // Create cursor & follower if missing
   let cursor = document.querySelector(".cursor");
   let follower = document.querySelector(".cursor-follower");
 
@@ -186,22 +187,47 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.className = "cursor";
     document.body.appendChild(cursor);
   }
-
   if (!follower) {
     follower = document.createElement("div");
     follower.className = "cursor-follower";
     document.body.appendChild(follower);
   }
 
-  let mouseX = 0;
-  let mouseY = 0;
-  let cursorX = 0;
-  let cursorY = 0;
-  let followerX = 0;
-  let followerY = 0;
+  // Read attribute-based configuration
+  const config = {
+    cursorSpeed: parseFloat(cursor.dataset.speed) || 0.18,
+    followerSpeed: parseFloat(follower.dataset.speed) || 0.08,
 
-  const cursorSpeed = 0.18;
-  const followerSpeed = 0.08;
+    cursorSize: parseFloat(cursor.dataset.size) || 8,
+    followerSize: parseFloat(follower.dataset.size) || 35,
+
+    cursorColor: cursor.dataset.color || "#ffffff",
+    followerColor: follower.dataset.color || "rgba(255,255,255,0.4)",
+
+    hoverScaleCursor: parseFloat(cursor.dataset.hoverScale) || 1.3,
+    hoverScaleFollower: parseFloat(follower.dataset.hoverScale) || 1.6,
+
+    textScaleCursor: parseFloat(cursor.dataset.textScale) || 1.2,
+    textScaleFollower: parseFloat(follower.dataset.textScale) || 1.4
+  };
+
+  // Apply base styles from attributes
+  Object.assign(cursor.style, {
+    width: config.cursorSize + "px",
+    height: config.cursorSize + "px",
+    background: config.cursorColor
+  });
+
+  Object.assign(follower.style, {
+    width: config.followerSize + "px",
+    height: config.followerSize + "px",
+    background: config.followerColor
+  });
+
+  // Motion variables
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+  let followerX = 0, followerY = 0;
 
   document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
@@ -209,14 +235,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function animate() {
-    const distX = mouseX - cursorX;
-    const distY = mouseY - cursorY;
+    cursorX += (mouseX - cursorX) * config.cursorSpeed;
+    cursorY += (mouseY - cursorY) * config.cursorSpeed;
 
-    cursorX += distX * cursorSpeed;
-    cursorY += distY * cursorSpeed;
-
-    followerX += (mouseX - followerX) * followerSpeed;
-    followerY += (mouseY - followerY) * followerSpeed;
+    followerX += (mouseX - followerX) * config.followerSpeed;
+    followerY += (mouseY - followerY) * config.followerSpeed;
 
     cursor.style.left = cursorX + "px";
     cursor.style.top = cursorY + "px";
@@ -225,54 +248,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
     requestAnimationFrame(animate);
   }
-
   animate();
 
-  const buttons = document.querySelectorAll(".btn, .card, .image-box");
+  // Hover elements
+  const interactive = document.querySelectorAll(".btn, .card, .image-box, button");
 
-  buttons.forEach((button) => {
-    button.addEventListener("mouseenter", () => {
-      cursor.classList.add("hover");
-      follower.classList.add("hover");
+  interactive.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursor.style.transform = `translate(-50%, -50%) scale(${config.hoverScaleCursor})`;
+      follower.style.transform = `translate(-50%, -50%) scale(${config.hoverScaleFollower})`;
     });
-
-    button.addEventListener("mouseleave", () => {
-      cursor.classList.remove("hover");
-      follower.classList.remove("hover");
+    el.addEventListener("mouseleave", () => {
+      cursor.style.transform = "translate(-50%, -50%) scale(1)";
+      follower.style.transform = "translate(-50%, -50%) scale(1)";
     });
   });
 
+  // Text hover elements
   const textElements = document.querySelectorAll("h1, h2, h3, p, a");
 
-  textElements.forEach((text) => {
-    text.addEventListener("mouseenter", () => {
-      cursor.classList.add("text-hover");
-      follower.classList.add("text-hover");
+  textElements.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursor.style.transform = `translate(-50%, -50%) scale(${config.textScaleCursor})`;
+      follower.style.transform = `translate(-50%, -50%) scale(${config.textScaleFollower})`;
     });
-
-    text.addEventListener("mouseleave", () => {
-      cursor.classList.remove("text-hover");
-      follower.classList.remove("text-hover");
+    el.addEventListener("mouseleave", () => {
+      cursor.style.transform = "translate(-50%, -50%) scale(1)";
+      follower.style.transform = "translate(-50%, -50%) scale(1)";
     });
   });
 
+  // Hide on window leave
   document.addEventListener("mouseleave", () => {
     cursor.style.opacity = "0";
     follower.style.opacity = "0";
   });
-
   document.addEventListener("mouseenter", () => {
     cursor.style.opacity = "1";
     follower.style.opacity = "1";
   });
 
+  // Click effect
   document.addEventListener("mousedown", () => {
     cursor.style.transform = "translate(-50%, -50%) scale(0.8)";
     follower.style.transform = "translate(-50%, -50%) scale(0.9)";
   });
-
   document.addEventListener("mouseup", () => {
     cursor.style.transform = "translate(-50%, -50%) scale(1)";
     follower.style.transform = "translate(-50%, -50%) scale(1)";
   });
+
 });
