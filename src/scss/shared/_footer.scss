@@ -97,15 +97,16 @@
 
   .footer__link {
     display: flex;
-    align-items: flex-start;
+    // align-items: flex-start;
+    align-items: center;
     gap: 10px;
-    color: var(--body-color);
     text-decoration: none;
     font-size: var(--font-size-lg);
     font-weight: 500;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      color: var(--primary-dark-1);
     }
   }
 }

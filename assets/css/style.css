@@ -699,17 +699,17 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
-  color: var(--body-color);
   text-decoration: none;
   font-size: var(--font-size-lg);
   font-weight: 500;
 }
 .footer .footer__link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--primary-dark-1);
 }
 
 /* sections */

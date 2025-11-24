@@ -1,7 +1,10 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const lenis = new Lenis({
-    smooth: true,
+    // smooth: true, 
+    duration: 2.2,
     smoothWheel: true,
+    smoothTouch: true,
     lerp: 0.1,
   });
 
