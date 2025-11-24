@@ -802,6 +802,8 @@ section {
   font-weight: 400;
   font-size: 17px;
   margin-bottom: 0;
+  text-wrap: balance;
+  padding-right: 10vw;
 }
 .why__card-text {
   color: var(--card-text-color);
