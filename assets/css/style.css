@@ -637,7 +637,6 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: var(--spacing-8);
-  font-size: 15px;
   color: var(--body-color);
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1798,7 +1797,7 @@ section {
           flex: 1;
 }
 .about-faq-section .about-text p {
-  font-size: 0.95rem;
+  font-size: var(--font-size-lg);
   margin-bottom: 20px;
   opacity: 0.9;
 }
