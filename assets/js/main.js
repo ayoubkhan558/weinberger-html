@@ -175,11 +175,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 // custom cursor
 document.addEventListener("DOMContentLoaded", function () {
-  const cursor = document.querySelector(".cursor");
-  const follower = document.querySelector(".cursor-follower");
+  // Check for cursor and follower; create if missing
+  let cursor = document.querySelector(".cursor");
+  let follower = document.querySelector(".cursor-follower");
+
+  if (!cursor) {
+    cursor = document.createElement("div");
+    cursor.className = "cursor";
+    document.body.appendChild(cursor);
+  }
+
+  if (!follower) {
+    follower = document.createElement("div");
+    follower.className = "cursor-follower";
+    document.body.appendChild(follower);
+  }
 
   let mouseX = 0;
   let mouseY = 0;
@@ -188,31 +200,24 @@ document.addEventListener("DOMContentLoaded", function () {
   let followerX = 0;
   let followerY = 0;
 
-  // Smoother easing values
   const cursorSpeed = 0.18;
   const followerSpeed = 0.08;
 
-  // Track mouse position
   document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
 
-  // Smooth animation loop
   function animate() {
-    // Calculate distance for easing
     const distX = mouseX - cursorX;
     const distY = mouseY - cursorY;
 
-    // Update cursor position with easing
     cursorX += distX * cursorSpeed;
     cursorY += distY * cursorSpeed;
 
-    // Update follower with slower easing
     followerX += (mouseX - followerX) * followerSpeed;
     followerY += (mouseY - followerY) * followerSpeed;
 
-    // Apply transforms
     cursor.style.left = cursorX + "px";
     cursor.style.top = cursorY + "px";
     follower.style.left = followerX + "px";
@@ -223,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animate();
 
-  // Hover effects for buttons and interactive elements
   const buttons = document.querySelectorAll(".btn, .card, .image-box");
 
   buttons.forEach((button) => {
@@ -238,7 +242,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Special hover effect for text and links
   const textElements = document.querySelectorAll("h1, h2, h3, p, a");
 
   textElements.forEach((text) => {
@@ -253,7 +256,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Hide cursor when leaving window
   document.addEventListener("mouseleave", () => {
     cursor.style.opacity = "0";
     follower.style.opacity = "0";
@@ -264,7 +266,6 @@ document.addEventListener("DOMContentLoaded", function () {
     follower.style.opacity = "1";
   });
 
-  // Click effect
   document.addEventListener("mousedown", () => {
     cursor.style.transform = "translate(-50%, -50%) scale(0.8)";
     follower.style.transform = "translate(-50%, -50%) scale(0.9)";
@@ -274,6 +275,4 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.style.transform = "translate(-50%, -50%) scale(1)";
     follower.style.transform = "translate(-50%, -50%) scale(1)";
   });
-
-
 });
