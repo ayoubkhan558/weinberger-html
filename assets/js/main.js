@@ -83,8 +83,14 @@ document.addEventListener("DOMContentLoaded", function () {
     interval: 3000,
     pagination: false,
     arrows: false,
+    drag: "free",
+    snap: false,
+    rewind: true,
+    rewindByDrag: true,
+    lazyLoad: true,
+    perMove: 1,
     gap: 32,
-    perPage: 3, // Desktop: 3 slides
+    perPage: 3.5, // Desktop: 3 slides
     breakpoints: {
       768: {
         perPage: 1, // Mobile: 1 slide

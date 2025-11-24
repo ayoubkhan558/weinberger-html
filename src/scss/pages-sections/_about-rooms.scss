@@ -1,14 +1,11 @@
 .rooms {
 
-  .container {
 
+  @media (min-width: $dev-mobile) {}
 
-    @media (min-width: $dev-mobile) {}
+  @media (min-width: $dev-tablet) {}
 
-    @media (min-width: $dev-tablet) {}
-
-    @media (min-width: $dev-desktop) {}
-  }
+  @media (min-width: $dev-desktop) {}
 
   .room__title {
     text-align: left;
@@ -54,7 +51,12 @@
     @media (min-width: $dev-tablet) {}
 
     @media (min-width: $dev-desktop) {}
+.splide__track {
 
+}
+    .splide__list{
+// padding-left: 15%;
+    }
     .splide__slide {}
   }
 
