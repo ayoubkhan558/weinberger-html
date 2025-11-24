@@ -812,7 +812,7 @@ section {
 .why__card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  background-color: var(--card-bg-color);
+  background-color: var(--white);
 }
 .why__card:hover .why__card-title {
   color: var(--primary);
