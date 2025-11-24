@@ -1,71 +1,73 @@
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function () {
   const lenis = new Lenis({
-    duration: 2.2,
+    smooth: true,
     smoothWheel: true,
-    smoothTouch: true,
-    // smooth: true,
+    lerp: 0.1,
   });
 
   function raf(time) {
     lenis.raf(time);
+
+    if (window.sr && sr.delegate) {
+      sr.delegate();
+    }
+
     requestAnimationFrame(raf);
   }
-
   requestAnimationFrame(raf);
+
+  if (typeof ScrollReveal !== "undefined") {
+    window.sr = ScrollReveal({
+      distance: "24px",
+      duration: 700,
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      scale: 1,
+      mobile: true,
+      reset: false,
+    });
+
+    const revealIfExists = (selector, options) => {
+      if (document.querySelector(selector)) {
+        sr.reveal(selector, options);
+      }
+    };
+
+    /* ---------------------------------------------------------
+       REVEALS
+    --------------------------------------------------------- */
+
+    revealIfExists(".home-hero__content", {
+      origin: "bottom",
+      interval: 50,
+      delay: 100,
+    });
+
+    revealIfExists(".why__card", {
+      origin: "bottom",
+      distance: "16px",
+      interval: 120,
+    });
+
+    revealIfExists(".treatments__item", {
+      origin: "bottom",
+      distance: "20px",
+      interval: 100,
+    });
+
+    revealIfExists(".memberships__item", {
+      origin: "bottom",
+      distance: "12px",
+      interval: 80,
+    });
+
+    revealIfExists(".contact__image, .contact__content", {
+      origin: "right",
+      distance: "24px",
+      interval: 80,
+    });
+  }
 });
 
-(function () {
-  function initScrollReveal() {
-    try {
-      if (typeof ScrollReveal === 'undefined') return;
-      const sr = ScrollReveal({
-        distance: '24px',
-        duration: 700,
-        easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
-        scale: 1,
-        mobile: true
-      });
-
-      // Hero content
-      sr.reveal('.home-hero__content', { origin: 'bottom', interval: 50, delay: 100 });
-
-      // Why cards
-      sr.reveal('.why__card', { origin: 'bottom', distance: '16px', interval: 120 });
-
-      // Treatments grid items
-      sr.reveal('.treatments__item', { origin: 'bottom', distance: '20px', interval: 100 });
-
-      // Membership logos
-      sr.reveal('.memberships__item', { origin: 'bottom', distance: '12px', interval: 80 });
-
-      // Contact block
-      sr.reveal('.contact__image, .contact__content', { origin: 'right', distance: '24px', interval: 80 });
-
-    } catch (err) {
-      try { console.error('ScrollReveal init error', err); } catch (e) { }
-    }
-  }
-
-  try {
-    if (typeof ScrollReveal === 'undefined') {
-      // Dynamically load ScrollReveal when it's missing (fallback for pages
-      // that weren't rebuilt or that don't include the script tag).
-      const s = document.createElement('script');
-      s.src = './assets/js/scrollreveal.js';
-      s.async = true;
-      s.onload = initScrollReveal;
-      s.onerror = function (ev) {
-        try { console.error('Failed to load ScrollReveal', ev); } catch (e) { }
-      };
-      (document.head || document.documentElement).appendChild(s);
-    } else {
-      initScrollReveal();
-    }
-  } catch (err) {
-    try { console.error('ScrollReveal loader error', err); } catch (e) { }
-  }
-})();
 
 
 
