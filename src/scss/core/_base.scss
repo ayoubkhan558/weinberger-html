@@ -35,13 +35,17 @@
      overflow-wrap: break-word;
      line-height: 1.2;
 
-     @media (min-width: $dev-mobile) {}
-
-     @media (min-width: $dev-tablet) {
-         line-height: 1.4;
+     @media (min-width: $dev-mobile) {
+         line-height: 1.25;
      }
 
-     @media (min-width: $dev-desktop) {}
+     @media (min-width: $dev-tablet) {
+         line-height: 1.35;
+     }
+
+     @media (min-width: $dev-desktop) {
+         line-height: 1.4;
+     }
  }
 
  p {

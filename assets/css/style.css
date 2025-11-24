@@ -168,7 +168,27 @@ h6 {
   overflow-wrap: break-word;
   line-height: 1.2;
 }
+@media (min-width: 430px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.25;
+  }
+}
 @media (min-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.35;
+  }
+}
+@media (min-width: 1224px) {
   h1,
   h2,
   h3,
@@ -178,6 +198,7 @@ h6 {
     line-height: 1.4;
   }
 }
+
 p {
   overflow-wrap: break-word;
 }
