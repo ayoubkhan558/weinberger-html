@@ -40,8 +40,8 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing-24) 0;
-  padding: 24px 0;
+  // padding: var(--spacing-24) 0;
+  padding: fluid-value(16px, 24px) 0;
   background-color: #fff;
 
   @media (min-width: $dev-mobile) {}
@@ -60,14 +60,17 @@
 
     img,
     svg {
-      height: 60px;
+      height: 45px;
       max-width: 125px;
 
       @media (min-width: $dev-mobile) {}
 
-      @media (min-width: $dev-tablet) {}
+      @media (min-width: $dev-tablet) {
+        height: 50px;
+      }
 
       @media (min-width: $dev-desktop) {
+        height: 60px;
         max-width: none;
       }
     }

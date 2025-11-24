@@ -393,8 +393,7 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: var(--spacing-24) 0;
-  padding: 24px 0;
+  padding: clamp(16px, 12.5940594059px + 0.0079207921 * 100vw, 24px) 0;
   background-color: #fff;
   /* ---- Mobile Toggle Button ---- */
 }
@@ -417,12 +416,19 @@ section {
 }
 .header .logo img,
 .header .logo svg {
-  height: 60px;
+  height: 45px;
   max-width: 125px;
+}
+@media (min-width: 768px) {
+  .header .logo img,
+  .header .logo svg {
+    height: 50px;
+  }
 }
 @media (min-width: 1224px) {
   .header .logo img,
   .header .logo svg {
+    height: 60px;
     max-width: none;
   }
 }
