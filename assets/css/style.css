@@ -760,6 +760,7 @@ html.lenis {
 }
 .footer__icon svg {
   height: 21px;
+  width: 21px;
 }
 .footer__links {
   display: -webkit-box;
