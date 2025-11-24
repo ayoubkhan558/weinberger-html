@@ -138,7 +138,7 @@
     }
 
     &.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
+      transform: rotate(45deg) translate(7px, 6px);
     }
 
     &.active span:nth-child(2) {
@@ -151,7 +151,6 @@
   }
 
   nav {
-    display: none;
     position: absolute;
     left: 0;
     padding: var(--spacing-24);
@@ -159,12 +158,16 @@
     width: 100%;
     background-color: #fff;
     padding: 24px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease;
 
     @media (min-width: $dev-mobile) {}
 
     @media (min-width: $dev-tablet) {}
 
     @media (min-width: $dev-desktop) {
+      transform: scaleY(1);
       display: flex;
       position: static;
       width: auto;
@@ -173,7 +176,7 @@
     }
 
     &.open {
-      display: flex;
+      transform: scaleY(1);
     }
 
     gap: var(--spacing-24);

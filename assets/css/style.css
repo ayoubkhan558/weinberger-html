@@ -497,8 +497,8 @@ section {
   transition: 0.3s ease;
 }
 .header .nav-toggle.active span:nth-child(1) {
-  -webkit-transform: rotate(45deg) translate(5px, 5px);
-          transform: rotate(45deg) translate(5px, 5px);
+  -webkit-transform: rotate(45deg) translate(7px, 6px);
+          transform: rotate(45deg) translate(7px, 6px);
 }
 .header .nav-toggle.active span:nth-child(2) {
   opacity: 0;
@@ -508,7 +508,6 @@ section {
           transform: rotate(-45deg) translate(5px, -5px);
 }
 .header nav {
-  display: none;
   position: absolute;
   left: 0;
   padding: var(--spacing-24);
@@ -516,10 +515,20 @@ section {
   width: 100%;
   background-color: #fff;
   padding: 24px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: opacity 260ms ease, -webkit-transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 260ms ease, -webkit-transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease;
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease, -webkit-transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
   gap: var(--spacing-24);
 }
 @media (min-width: 1224px) {
   .header nav {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -530,9 +539,8 @@ section {
   }
 }
 .header nav.open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 .header nav ul {
   display: -webkit-box;
