@@ -208,7 +208,10 @@ document.addEventListener("DOMContentLoaded", function () {
     hoverScaleFollower: parseFloat(follower.dataset.hoverScale) || 1.6,
 
     textScaleCursor: parseFloat(cursor.dataset.textScale) || 1.2,
-    textScaleFollower: parseFloat(follower.dataset.textScale) || 1.4
+    textScaleFollower: parseFloat(follower.dataset.textScale) || 1.4,
+
+    hoverTargets: cursor.dataset.hoverTargets || ".btn, .card, .image-box, button",
+    textTargets: cursor.dataset.textTargets || "h1, h2, h3, p, a"
   };
 
   // Apply base styles from attributes
@@ -250,10 +253,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   animate();
 
-  // Hover elements
-  const interactive = document.querySelectorAll(".btn, .card, .image-box, button");
+  // Hover elements (FROM ATTRIBUTE)
+  const hoverElements = document.querySelectorAll(config.hoverTargets);
 
-  interactive.forEach(el => {
+  hoverElements.forEach(el => {
     el.addEventListener("mouseenter", () => {
       cursor.style.transform = `translate(-50%, -50%) scale(${config.hoverScaleCursor})`;
       follower.style.transform = `translate(-50%, -50%) scale(${config.hoverScaleFollower})`;
@@ -264,8 +267,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Text hover elements
-  const textElements = document.querySelectorAll("h1, h2, h3, p, a");
+  // Text hover elements (FROM ATTRIBUTE)
+  const textElements = document.querySelectorAll(config.textTargets);
 
   textElements.forEach(el => {
     el.addEventListener("mouseenter", () => {
