@@ -767,7 +767,7 @@ section {
   padding: 14px 12px;
   background: rgba(42, 81, 60, 0.3019607843);
   color: var(--white);
-  font-size: 22px;
+  font-size: clamp(18px, 15.4455445545px + 0.0059405941 * 100vw, 24px);
   font-weight: 500;
   text-align: center;
   backdrop-filter: blur(6px);
