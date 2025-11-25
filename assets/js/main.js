@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const lenis = new Lenis({
     duration: isMobile ? 0.7 : 1.2,
     smoothWheel: true,
+    wheelMultiplier: 1.2,
     smoothTouch: isMobile ? false : true, // better responsiveness
     lerp: isMobile ? 0.18 : 0.075,        // faster catch-up on mobile
   });

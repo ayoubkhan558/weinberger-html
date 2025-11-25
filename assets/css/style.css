@@ -388,6 +388,11 @@ html.lenis {
   pointer-events: none;
 }
 
+.lenis.lenis-smooth [data-lenis-prevent] {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+}
+
 /* Custom Cursor */
 .cursor {
   width: 10px;
