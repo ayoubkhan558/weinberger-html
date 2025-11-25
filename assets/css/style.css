@@ -881,13 +881,6 @@ html.lenis {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-:root {
-  --section-title-color: var(--color-primary);
-  --card-bg-color: var(--neutral-200);
-  --card-border-radius: var(--radius-20);
-  --card-padding: var(--spacing-20);
-}
-
 .why {
   background-color: var(--neutral-100);
 }
@@ -898,9 +891,9 @@ html.lenis {
   gap: var(--spacing-16);
 }
 .why__card {
-  border-radius: var(--card-border-radius);
+  border-radius: var(--radius-20);
   border: 1px solid rgba(0, 66, 47, 0.3019607843);
-  padding: var(--card-padding);
+  padding: var(--spacing-20);
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(25% - var(--spacing-20));
           flex: 1 1 calc(25% - var(--spacing-20));
@@ -940,7 +933,7 @@ html.lenis {
 }
 .why__icon {
   font-size: 3rem;
-  color: var(--section-title-color);
+  color: var(--color-primary);
 }
 .why__icon svg {
   display: block;
