@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     duration: 1.2,
     smoothWheel: true,
     smoothTouch: true,
-    lerp: 0.1,
+    lerp: 0.5,
   });
 
   function raf(time) {
