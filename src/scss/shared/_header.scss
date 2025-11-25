@@ -28,7 +28,7 @@
   a:focus-visible,
   button:focus-visible,
   .nav-toggle:focus-visible {
-    outline: 3px solid var(--primary);
+    outline: 3px solid var(--color-primary);
     outline-offset: 2px;
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
   }
@@ -137,7 +137,7 @@
     span {
       width: 100%;
       height: 2px;
-      background: var(--body-color);
+      background: var(--text-body-color);
       transition: .3s ease;
     }
 
@@ -207,7 +207,7 @@
 
         a {
           text-decoration: none;
-          color: var(--primary);
+          color: var(--color-primary);
           font-weight: normal;
 
           &:hover {}

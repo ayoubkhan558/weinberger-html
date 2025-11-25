@@ -5,7 +5,7 @@
   width: fit-content;
 
   &.btn-primary {
-    background-color: var(--primary);
+    background-color: var(--color-primary);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -14,20 +14,20 @@
 
     &:hover {
       color: white;
-      background-color: var(--primary-dark-1);
+      background-color: var(--color-primary-dark-1);
     }
   }
 
   &.btn-outline-primary {
     background-color: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
 
     &:hover {
-      background-color: var(--primary);
+      background-color: var(--color-primary);
       color: white;
     }
   }

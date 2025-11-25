@@ -26,13 +26,13 @@
 
     .team__name {
       font-size: 24px;
-      color: var(--primary);
+      color: var(--color-primary);
       font-weight: 600;
       margin: 0;
     }
 
     .team__role {
-      color: var(--primary);
+      color: var(--color-primary);
     }
   }
 
@@ -63,7 +63,7 @@
     &-bar {
       height: 100%;
       width: 0;
-      background: var(--primary);
+      background: var(--color-primary);
       transition: width 0.3s ease;
     }
 

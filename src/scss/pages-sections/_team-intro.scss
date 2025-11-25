@@ -19,7 +19,7 @@
   .intro-text-sec__text {
     text-align: center;
     font-size: fluid-value(16px, 20px);
-    color: var(--primary);
+    color: var(--color-primary);
     font-weight: 400;
     font-style: italic;
     margin-bottom: fluid-value(24px, 35px);
@@ -45,7 +45,7 @@
     flex: 1;
 
     p {
-      font-size: var(--font-size-lg);
+      font-size: var(--text-16-18);
       text-align: justify;
     }
   }
