@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   const lenis = new Lenis({
-    duration: isMobile ? 0.7 : 1.2,
+    duration: 1.0,
     smoothWheel: true,
-    wheelMultiplier: 1.2,
-    smoothTouch: isMobile ? false : true, // better responsiveness
-    lerp: isMobile ? 0.18 : 0.075,        // faster catch-up on mobile
+    wheelMultiplier: 0.85,
+    touchMultiplier: 1.5,
+    smoothTouch: true,
+    lerp: isMobile ? 0.18 : 0.075,
   });
 
   function raf(time) {
