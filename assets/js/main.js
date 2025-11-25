@@ -1,11 +1,11 @@
-
 document.addEventListener("DOMContentLoaded", function () {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   const lenis = new Lenis({
-    // smooth: true, 
-    duration: 1.2,
+    duration: isMobile ? 0.7 : 1.2,
     smoothWheel: true,
-    smoothTouch: true,
-    lerp: 0.075,
+    smoothTouch: isMobile ? false : true, // better responsiveness
+    lerp: isMobile ? 0.18 : 0.075,        // faster catch-up on mobile
   });
 
   function raf(time) {
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
 
   if (typeof ScrollReveal !== "undefined") {
     window.sr = ScrollReveal({
