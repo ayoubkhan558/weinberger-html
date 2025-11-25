@@ -43,14 +43,14 @@ $dev-max-width: 1440px;
     --color-accent-dark-2: hsl(from var(--color-accent) h s calc(l - 16));
     --color-accent-dark-3: hsl(from var(--color-accent) h s calc(l - 24));
 
-    /* spacing and radii */
-    --spacing-4: 4px;
-    --spacing-8: 8px;
-    --spacing-12: 12px;
-    --spacing-16: 16px;
-    --spacing-20: 20px;
-    --spacing-24: 24px;
-    --spacing-40: 40px;
+    /* space and radii */
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-40: 40px;
     @include fluid-var(section-padding, 45px, 65px);
     // radius
     --radius-4: 4px;

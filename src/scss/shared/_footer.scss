@@ -1,12 +1,12 @@
 .footer {
   background: var(--neutral-100);
-  padding: var(--spacing-40) 0;
+  padding: var(--space-40) 0;
 
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: var(--spacing-40);
+    gap: var(--space-40);
 
     @media (min-width: $dev-mobile) {}
 
@@ -40,14 +40,14 @@
 
   &__contact {
     display: flex;
-    gap: var(--spacing-40);
+    gap: var(--space-40);
     flex-wrap: wrap;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-8);
+    gap: var(--space-8);
     color: var(--text-body-color);
     align-items: center;
     width: 100%;

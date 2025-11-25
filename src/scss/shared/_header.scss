@@ -20,7 +20,7 @@
     background: #ffffff;
     background: var(--white);
     padding: 8px 12px;
-    padding: var(--spacing-8) var(--spacing-12);
+    padding: var(--space-8) var(--space-12);
     border-radius: var(--radius-4);
   }
 
@@ -40,7 +40,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  // padding: var(--spacing-24) 0;
+  // padding: var(--space-24) 0;
   padding: fluid-value(16px, 24px) 0;
   background-color: #fff;
 
@@ -157,7 +157,7 @@
   nav {
     position: absolute;
     left: 0;
-    padding: var(--spacing-24);
+    padding: var(--space-24);
     top: 100%;
     width: 100%;
     background-color: #fff;
@@ -183,7 +183,7 @@
       transform: scaleY(1);
     }
 
-    gap: var(--spacing-24);
+    gap: var(--space-24);
 
     ul {
       display: flex;
