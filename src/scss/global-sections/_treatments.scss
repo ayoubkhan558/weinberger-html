@@ -13,7 +13,7 @@
     &__item {
       border-radius: var(--radius-16);
       overflow: hidden;
-      background: var(--white);
+      background: var(--color-white);
       position: relative;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.25s ease;
@@ -29,16 +29,14 @@
         box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
       }
 
-      .treatments__link{}
+      .treatments__link {}
     }
 
     &__image {
-      img {
-        width: 100%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        display: block;
-      }
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      display: block;
     }
 
     &__label {
@@ -47,7 +45,7 @@
       width: 100%;
       padding: 14px 12px;
       background: #2A513C4D;
-      color: var(--white);
+      color: var(--color-white);
       font-size: fluid-value(18px, 24px);
       font-weight: 500;
       text-align: center;
